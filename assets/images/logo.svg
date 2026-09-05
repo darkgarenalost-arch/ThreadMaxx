@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 120" role="img" aria-labelledby="title">
+  <title id="title">ThreadMaxx</title>
+  <path fill="#000" d="M20 24h104v18H82v54H62V42H20V24Zm126 0h20v28h42V24h20v72h-20V70h-42v26h-20V24Zm112 0h62c18 0 29 9 29 24 0 10-5 17-14 21l18 27h-23l-15-23h-37v23h-20V24Zm20 18v14h39c7 0 11-2 11-7s-4-7-11-7h-39Zm100-18h86v18h-66v9h60v17h-60v10h67v18h-87V24Zm116 0h86v18h-66v9h60v17h-60v10h67v18h-87V24Zm116 0h40l25 46 25-46h40v72h-20V45l-29 51h-32l-29-51v51h-20V24Z"/>
+  <path fill="#000" d="M626 24h25l18 22 18-22h25l-30 35 32 37h-25l-20-24-20 24h-25l32-37-30-35Z"/>
+  <path fill="#000" d="M642 14h14l56 92h-14L642 14Zm56 0h14l-56 92h-14L698 14Z" opacity=".22"/>
+</svg>
