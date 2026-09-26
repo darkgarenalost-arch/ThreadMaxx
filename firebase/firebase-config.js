@@ -24,7 +24,7 @@ export const brandConfig = {
   standardShipping: 0,
   codFee: 0,
   adminUids: [
-    "YDcQ1GjP1ib6SottudJIuMIEonY2"
+    "NUMulxI1hQeAFOyjpnlaFaUI3Rn2"
   ]
 };
 
