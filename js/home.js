@@ -1,33 +1,8 @@
-import { getBanners, getProducts } from "../firebase/firestore-service.js";
-import { categories, fallbackBanners, fallbackProducts, reviews } from "./data.js";
+import { getProducts } from "../firebase/firestore-service.js";
+import { categories, fallbackProducts, reviews } from "./data.js";
 import { $, initReveal, productCard, renderShell } from "./utils.js";
 
 renderShell("home");
-
-const banners = await getBanners().catch(() => fallbackBanners);
-const heroBg = $("#hero-bg");
-const heroEyebrow = $("#hero-eyebrow");
-const heroTitle = $("#hero-title");
-const heroSubtitle = $("#hero-subtitle");
-const heroCta = $("#hero-cta");
-
-if (!heroBg.querySelector("video")) {
-  heroBg.innerHTML = banners.map((banner, index) => `<img class="${index === 0 ? "active" : ""}" src="${banner.image}" alt="${banner.title}">`).join("");
-}
-let activeBanner = 0;
-function setBanner(index) {
-  const banner = banners[index];
-  heroBg.querySelectorAll("img").forEach((img, imgIndex) => img.classList.toggle("active", imgIndex === index));
-  heroEyebrow.textContent = banner.eyebrow || "ThreadMaxx";
-  heroTitle.textContent = banner.title || "ThreadMaxx";
-  heroSubtitle.textContent = banner.subtitle || "";
-  heroCta.textContent = banner.cta || "Shop now";
-  heroCta.href = banner.link || "products/";
-}
-setInterval(() => {
-  activeBanner = (activeBanner + 1) % banners.length;
-  setBanner(activeBanner);
-}, 5200);
 
 $("#category-grid").innerHTML = categories.map((category) => `
   <a class="category-card reveal" href="products/?category=${category.slug}">
